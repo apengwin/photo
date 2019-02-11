@@ -85,30 +85,6 @@ class NavBase extends React.Component {
     const { renderMobileLinks, renderDesktopLinks, renderMobileNavBar } = this.props;
     return (
       <div className={navbarContainerClasses}>
-        <div className="navbar-body">
-          <div className="navbar">
-            <NotMobile>
-              <LogoWrapper>
-                <NavLink to='/'>
-                  <LogoText>Mason Chan</LogoText>
-                </NavLink>
-              </LogoWrapper>
-            </NotMobile>
-            {renderMobileNavBar()}
-            {renderDesktopLinks(this.onToggleAbout)}
-            {renderMobileLinks()}
-          </div>
-          <NotMobile>
-            <div className={aboutClasses}>
-              <p>Hello, I'm Mason.</p>
-              <p>I find great joy in capturing humanity in its rawest form through the medium of film photography.</p>
-              <div className="hide-about-btn__wrapper" onClick={this.onToggleAbout}>
-                <div className="hide-about-btn"></div>
-              </div>
-              <p>I also maintain a fascination for urban landscapes and public transportation.</p>
-            </div>
-          </NotMobile>
-        </div>
       </div>
     );
   }
@@ -136,7 +112,7 @@ export const Nav = compose(
         <MobileLogoWrapper>
           <NavLink to='/'>
             <MobileLogoText>
-              Mason Chan
+              photos
             </MobileLogoText>
           </NavLink>
           <PlainLink
